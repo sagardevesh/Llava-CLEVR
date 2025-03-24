@@ -34,7 +34,7 @@ ANSWER_TO_LABEL = {ans: i for i, ans in enumerate(CLEVR_ANSWERS)}
 # 2) BitsAndBytesConfig for 4-bit
 ###############################################################################
 quant_config = BitsAndBytesConfig(
-    load_in_8bit=True,
+    load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,  # you can also try torch.bfloat16
     bnb_4bit_use_double_quant=True,
     bnb_4bit_quant_type="nf4",            # or "fp4"
